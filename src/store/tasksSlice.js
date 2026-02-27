@@ -1,9 +1,8 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const API_URL = 'https://69a1ebf12e82ee536fa299af.mockapi.io/tasks'; // для JSON Server
+const API_URL = 'https://69a1ebf12e82ee536fa299af.mockapi.io/tasks'; 
 
-// Замените на свой URL при деплое (например, MockAPI)
 
 export const fetchTasks = createAsyncThunk('tasks/fetchTasks', async () => {
   const response = await axios.get(API_URL);
